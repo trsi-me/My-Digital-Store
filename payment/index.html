@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="تلر الشهراني">
+    <meta name="description" content="صفحة الدفع - T.S.P">
+
+    <title>صفحة الدفع - T.S.P</title>
+
+    <link rel="stylesheet" href="style.css">
+ 
+    <link rel="icon" type="images/x-icon" href="../assets/images/‏‏My Logo Without Bg.icon">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+</head>
+<body>
+    <div class="loader-cont">
+        <div class="loader" id="loader">
+            <div class="terminal-header">
+                <div class="terminal-title">Status</div>
+                <div class="terminal-controls">
+                <div class="control close"></div>
+                <div class="control minimize"></div>
+                <div class="control maximize"></div>
+                </div>
+            </div>
+            <div class="text">اصبر عشان تتحمل الصفحة...</div>
+        </div>
+    </div>
+
+    <div class="containers">
+        <div class="cont1">
+            <div id="paypal-button-container">
+                <style>.pp-A92VHQ722GAQA{text-align:center;border:none;border-radius:1.5rem;min-width:11.625rem;padding:0 2rem;height:2.625rem;font-weight:bold;background-color:#FFD140;color:#000000;font-size:1rem;line-height:1.25rem;cursor:pointer;}</style>
+                <form action="https://www.paypal.com/ncp/payment/A92VHQ722GAQA" method="post" target="_top" style="display:inline-grid;justify-items:center;align-content:start;gap:0.5rem;">
+                  <input class="pp-A92VHQ722GAQA" type="submit" value="اشترِ الآن" />
+                  <img src=https://www.paypalobjects.com/images/Debit_Credit_APM.svg alt="cards" />
+                  <section> مدعوم من <img src="https://www.paypalobjects.com/paypal-ui/logos/svg/paypal-wordmark-color.svg" alt="paypal" style="height:0.875rem;vertical-align:middle;"/></section>
+                </form>
+            </div>
+        </div>
+
+        <div class="or"><h2>أو</h2></div>
+
+        <div class="cont2">
+            <div class="cards-cont">
+                <img src="../assets/images/Bank.webp" alt="شعار بنك">
+                <h1>التحويل البنكي</h1>
+                <p class="note">لدواعي الخصوصية، الرجاء التواصل في الخاص.</p>
+            </div>
+            <div class="cards-cont">
+                <img src="../assets/images/stcpay.webp" alt="شعار stcpay">
+                <h1>stcpay</h1>
+                <p class="note">لدواعي الخصوصية، الرجاء التواصل في الخاص.</p>
+            </div>
+            <div class="cards-cont">
+                <img src="../assets/images/Barq.webp" alt="شعار برق">
+                <h1>برق</h1>
+                <p class="note">لدواعي الخصوصية، الرجاء التواصل في الخاص.</p>
+            </div>
+            <div class="cards-cont" data-method="sadad">
+                <img src="../assets/images/Sadad.webp" alt="شعار سداد">
+                <h1>سداد</h1>
+            </div>
+            <div class="cards-cont" data-method="btc">
+                <img src="../assets/images/BTC.webp" alt="شعار BTC">
+                <h1>العملات الرقمية</h1>
+            </div>
+            <!-- <div class="cards-cont" data-method="cash">
+                <img src="../assets/images/Cash.webp" alt="شعار الكاش">
+                <h1>الكاش</h1>
+                <p class="note">الرجاء التواصل في الخاص.</p>
+            </div> -->
+
+            <div class="previews">
+                <div class="preview" data-target="sadad">
+                    <div class="preview-close"><i class="fa-solid fa-xmark"></i></div>
+
+                    <div class="sadad-info">
+                        <p>
+                            - اسم مفوتر سداد : 207-stc pay<br>
+                            - رقم سداد : 81950542766
+                        </p>
+                    </div>
+
+                    <form id="sadad-form" method="POST" enctype="multipart/form-data" action="handling.php">
+                        <input class="name" type="text" name="name" placeholder="الاسم" required>
+                        <input class="email" type="email" name="email" placeholder="البريد الإلكتروني" required>
+                        <input type="hidden" name="payment_method" value="Sadad">
+                        <input type="hidden" name="amount" value="">
+                        <label for="proof-sadad" class="custom-file-upload">رفع صورة الحوالة</label>
+                        <p class="accept">الصيغ المدعومة : .jpeg, .png, .webp, .pdf.</p>
+                        <input type="file" name="transfer" id="proof-sadad" accept=".jpeg,.jpg,.png,.webp,.pdf" required>
+                        <button type="submit" class="custom-submit-button">إرسال الحوالة<i class="fa-solid fa-paper-plane" style="margin-right: 10px;"></i></button>           
+                    </form>
+                </div>
+                <div class="preview" data-target="btc">
+                    <div class="preview-close"><i class="fa-solid fa-xmark"></i></div>
+
+                    <div class="btc-cont">
+                        <div class="btc-info">
+                            <div class="img"><img src="../assets/images/BTC1.webp" alt="BTC1"></div>
+                            <p>
+                                - اسم العملة : USDT<br>
+                                - الشبكة : TRC20 (Tron)<br>
+                                - المحفظة : TMgsk2mkLVikYr7YkPmcT1DwHUZU6z6yiT
+                            </p>
+                        </div>
+                        
+                        <div class="btc-info">
+                            <div class="img"><img src="../assets/images/BTC2.webp" alt="BTC2"></div>
+                            <p>
+                                - اسم العملة : BTC<br>
+                                - الشبكة : BTC<br>
+                                - المحفظة : 14zY7iiPdzSKEU3MWGdCoLRST1QGyokGJG
+                            </p>
+                        </div>
+
+                        <div class="btc-info">
+                            <div class="img"><img src="../assets/images/BTC3.webp" alt="BTC3"></div>
+                            <p>
+                                - اسم العملة : ETH<br>
+                                - الشبكة : ETH (ERC20)<br>
+                                - المحفظة : 0x1217eb638234824d06a7a22daec44f7473e6cff7
+                            </p>
+                        </div>
+
+                        <p class="more">للتحويل إلى محافظ أخرى، يرجى التواصل في الخاص.</p>
+                    </div>
+
+                    <form id="crypto-form" method="POST" enctype="multipart/form-data" action="handling.php">
+                        <input class="name" type="text" name="name" placeholder="الاسم" required>
+                        <input class="email" type="email" name="email" placeholder="البريد الإلكتروني" required>
+                        <input type="hidden" name="payment_method" value="Crypto">
+                        <input type="hidden" name="amount" value="">
+                        <label for="proof-crypto" class="custom-file-upload">رفع صورة الحوالة</label>
+                        <p class="accept">الصيغ المدعومة : .jpeg, .png, .webp, .pdf.</p>
+                        <input type="file" name="transfer" id="proof-crypto" accept=".jpeg,.jpg,.png,.webp,.pdf" required>
+                        <button type="submit" class="custom-submit-button">إرسال الحوالة<i class="fa-solid fa-paper-plane" style="margin-right: 10px;"></i></button>           
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
